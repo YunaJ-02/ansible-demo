@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Set selinux to permissive mode
+      ansible.posix.selinux:
+        policy: targeted
+        state: permissive
+
+    - name: disable swap
+      shell: "swapoff -a" 
