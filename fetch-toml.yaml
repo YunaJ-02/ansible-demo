@@ -1,0 +1,8 @@
+---
+- name: fetch toml file
+  hosts: seoul
+  tasks:
+    - name: fetch file
+      fetch:
+        src: "/etc/containerd/config.toml"
+        dest: "/home/ansible-user/config.toml"
